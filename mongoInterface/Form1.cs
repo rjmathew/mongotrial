@@ -71,7 +71,9 @@ namespace mongoInterface
 
             var gameQuery = Query<Game>.EQ(g => g.Name, "Invaders 2013");
             var foundGame = games.FindOne(gameQuery);
-            games.Insert<Game>(new Game { Name="test",ReleaseDate=DateTime.Now.AddDays(-3)});
+            games.Insert<Game>(new Game { Name="test2",
+                Categories = new List<string> { "a","b"},
+                ReleaseDate =DateTime.Now.AddDays(-3)});
 
         }
     }
